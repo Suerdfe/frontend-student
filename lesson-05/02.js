@@ -35,4 +35,16 @@ const gallery = {
   'The Scream': 'Edvard Munch',
 }
 
-function updateGallery() {}
+function updateGallery(gallery1, title, newValue) {
+  //идём по объекту в котором перебираем ключ
+  for (const key in gallery1) {
+    if (key === title) {
+      gallery1[key] = newValue;
+      return
+    }
+  }
+  gallery1[title] = newValue;
+}
+
+updateGallery(gallery, 'Mona Lisa', '2000');
+console.log(gallery);
