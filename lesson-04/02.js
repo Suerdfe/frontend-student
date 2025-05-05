@@ -15,4 +15,22 @@
 Подсказка: можно использовать функцию `includesElement`, которую мы написали ранее. Переписывать её не нужно, она доступна по всему проекту за счёт hoisting.
 */
 
-function findUniqueElements() {}
+// Функция находит уникальные элементы массива
+function findUniqueElements(array) {
+    // Создаем пустой массив для хранения уникальных значений
+    let uniqueArray = [];
+
+    // Проходим по каждому элементу исходного массива
+    for (let i = 0; i < array.length; i++) {
+        // Проверяем, содержится ли текущий элемент в uniqueArray
+        if (!uniqueArray.includes(array[i])) {
+            // Если нет, добавляем его в uniqueArray
+            uniqueArray.push(array[i]);
+        }
+    }
+
+    // Возвращаем массив уникальных элементов
+    return uniqueArray;
+}
+
+console.log(findUniqueElements([1, 2, 3, 3, 4]));
