@@ -5,4 +5,16 @@
 */
 
 // your code
-let sum
+let sum = 0;
+let number = 1;
+
+while (number <= 20) {
+    if (number % 2 === 0) {
+        console.log("Чётное число")
+    } else {
+        sum += number;
+    }
+    number++;
+}
+console.log(sum);
+
