@@ -39,4 +39,4 @@ const oddNumbers = filter(numbers, (element, index) => {
     return element % 2 !== 0
 });
 
-console.log(oddNumbers);
+console.log(oddNumbers)
